@@ -1,0 +1,23 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="300" d:DesignHeight="450"
+        Width="350" Height="250"
+        x:Class="AvaloniaTestDrive.MainWindow"
+        Title="AvaloniaTestDrive">
+    <StackPanel>
+        <Border Margin="5" Background="Aqua" Padding="4" CornerRadius="3">
+            <TextBlock FontSize="24" Foreground="Black" HorizontalAlignment="Center">
+                Avalonia Test Drive
+            </TextBlock>
+        </Border>
+        <Grid RowDefinitions="Auto,Auto,Auto" ColumnDefinitions="120,100">
+            <Label Grid.Row="0" Grid.Column="0" Margin="10">Celsius</Label>
+            <TextBox Name="TxtCelsius" Grid.Row="0" Grid.Column="1" Margin="0 5" TextChanged="TxtCelsius_OnTextChanged" />
+            <Label Grid.Row="1" Grid.Column="0" Margin="10">Fahrenheit</Label>
+            <TextBox Name="TxtFahrenheit" Grid.Row="1" Grid.Column="1" Margin="0 5" IsReadOnly="True"/>
+            <Button Name="BtnCalculate" Grid.Row="2" Grid.Column="1" Margin="10" Click="BtnCalculate_OnClick">Calculate</Button>
+        </Grid>
+    </StackPanel>
+</Window>
